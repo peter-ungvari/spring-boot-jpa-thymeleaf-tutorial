@@ -53,4 +53,10 @@ Steps
 ### Use database
 26. Convert the `Post` DTO to entity class by adding an `id` field with getter and setter to it and `@Entity`, `@Id`,  `@GeneratedValue` annotations.
 27. Create `PostRepository` interface extending `JpaRepository<Post, Long>`
-28. Auto-wire the repository to the controller and use its methods instead of logging new posts and return hardcoded data. 
+28. Auto-wire the repository to the controller and use its methods instead of logging new posts and return hardcoded data.
+
+## TODO
+* Use validation
+* Add date to posts and format it based on locale
+* Use preformatted posts
+* Use i18n, message bundle
