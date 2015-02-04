@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Bulletin Board</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"/>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="page-header">Bulletin Board</h1>
+
+    <form action="" method="post">
+        <div class="form-group">
+            <label>Name</label>
+            <input name="name" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" class="form-control"></textarea>
+        </div>
+        <input type="submit" value="Post it!" class="btn btn-primary"/>
+    </form>
+
+    <hr/>
+
+    <h2>Posts</h2>
+    <dl class="dl-horizontal">
+        <dt>John Doe</dt>
+        <dd>Don't forget the milk!</dd>
+        <dt>Jane Doe</dt>
+        <dd>No milk today?</dd>
+    </dl>
+</div>
+</body>
+</html>
