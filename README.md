@@ -49,3 +49,8 @@ Steps
 25. Use the th:each and th:unless attributes to show the list of posts dynamically.
   * Note1: The variable name for the list of post is generated the from the return type of the `loadPosts()` method as `postList` which can be overriden by specifying a string parameter of the `@ModelAttribute` annotation.
   * Note2: `${#lists.isEmpty(<variable>)}` comes handy
+
+### Use database
+26. Convert the `Post` DTO to entity class by adding an `id` field with getter and setter to it and `@Entity`, `@Id`,  `@GeneratedValue` annotations.
+27. Create `PostRepository` interface extending `JpaRepository<Post, Long>`
+28. Auto-wire the repository to the controller and use its methods instead of logging new posts and return hardcoded data. 
