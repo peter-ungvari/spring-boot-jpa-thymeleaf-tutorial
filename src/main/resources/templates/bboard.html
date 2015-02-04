@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <title>Bulletin Board</title>
@@ -17,7 +18,7 @@
 <div class="container">
     <h1 class="page-header">Bulletin Board</h1>
 
-    <form action="" method="post">
+    <form action="post" method="post">
         <div class="form-group">
             <label>Name</label>
             <input name="name" class="form-control"/>
@@ -32,11 +33,9 @@
     <hr/>
 
     <h2>Posts</h2>
-    <dl class="dl-horizontal">
-        <dt>John Doe</dt>
-        <dd>Don't forget the milk!</dd>
-        <dt>Jane Doe</dt>
-        <dd>No milk today?</dd>
+    <dl class="dl-horizontal" th:each="post : ${postList}" th:unless="${#lists.isEmpty(postList)}">
+        <dt th:text="${post.name}">Jane Doe</dt>
+        <dd th:text="${post.message}">No milk today</dd>
     </dl>
 </div>
 </body>
